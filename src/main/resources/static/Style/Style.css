@@ -1,0 +1,103 @@
+body{
+    margin: 0 auto;
+    background-color: #161b22;
+}
+
+/* ------MAIN------ */
+/* Imagen fondo alargado */
+#general{
+    max-width: 100%;
+    width: 100%;
+    margin-top: -5px;
+    position: relative !important;
+}
+#pantalla{
+    width: 100%;
+    height: 500px;
+    position: absolute !important;
+    overflow: hidden !important;
+}
+#pantalla>img{
+    height: 500px;
+    position: absolute;
+    /* esto lo que hace es alargar la imagen con el !important */
+    width: 100% !important;
+}
+#pantalla>#HumoFondo{
+    height: 60px;
+    opacity: 0.7;
+    z-index:6;
+    margin-top: -10px;
+}
+/* Imagnes contenidos del fondo  */
+#imagenesContenido{
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 900px;
+    height: 500px;
+    
+}
+#imagenesContenido>#llamasP{
+    z-index: 1;
+    height: 300px;
+    position: absolute;
+    top: 0px;
+    left: 180px;
+}
+#imagenesContenido>#FondoPared{
+    z-index: 2;
+    height: 500px;
+    position: absolute;
+    left: 150px;
+}
+#imagenesContenido>#Humo{
+    z-index: 6;
+    height: 70px;
+    width: 100% !important;
+    position: absolute;
+    left: 30px;
+}
+#imagenesContenido>#PerroSentado{
+    z-index: 4;
+    height: 300px;
+    position: absolute;
+    top: 92px;
+    left: 225px;
+}
+#imagenesContenido>#mesa{
+    position: absolute;
+    z-index: 4;
+    height: 240px;
+    top: 160px;
+    left: 350px;
+}
+/* IMG de las llamas */
+#imagenesContenido>.llamas{
+    position: absolute;
+}
+#imagenesContenido>#llama1{
+    z-index: 5;
+    left: -240px;
+    height: 480px;
+
+}
+#imagenesContenido>#llama2{
+    z-index: 3;
+    height: 300px;
+    top: 70px;
+    left: 400px;
+}
+#imagenesContenido>#llama3{
+    z-index: 5;
+    height: 400px;
+    top: 80px;
+    left: 380px;
+}
+#BurbujaT{
+    z-index: 6;
+    position: absolute;
+    height: 200px;
+    top: 0px;
+    left: -40px;
+}
