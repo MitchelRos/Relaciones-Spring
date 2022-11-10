@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -14,7 +13,6 @@ public class CourseMaterial {
 	private Long id;
 	private String url;
 	@OneToOne
-	@JoinColumn(name="course_id")
 	private Course course;
 	
 	
@@ -49,8 +47,4 @@ public class CourseMaterial {
 	@Override
 	public String toString() {
 		return "CourseMaterial [id=" + id + ", url=" + url + ", course=" + course + "]";
-	}
-	
-	
-	
-}
+	}}

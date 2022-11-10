@@ -2,7 +2,6 @@ package com.Base.api.Entities;
 
 import java.time.LocalDate;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,42 +12,38 @@ public class Student {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column(name="lastname")
-	private String LastName;
-	@Column(name="firstname")
-	private String FirstName;
+	private String lastname;
+	private String firstname;
 	private LocalDate birthdate;
-	@Column(name="wantsnewsletter")
-	private Boolean wantsNewsletter;
+	private Boolean wantsnewsletter;
 	
 	public Student() {
 	}
-	public Student(Long id, String lastName, String firstName, LocalDate birthdate, Boolean wantsNewsletter) {
+	public Student(Long id, String lastname, String firstname, LocalDate birthdate, Boolean wantsnewsletter) {
 		super();
 		this.id = id;
-		LastName = lastName;
-		FirstName = firstName;
+		this.lastname = lastname;
+		this.firstname = firstname;
 		this.birthdate = birthdate;
-		this.wantsNewsletter = wantsNewsletter;
+		this.wantsnewsletter = wantsnewsletter;
 	}
-	
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getLastName() {
-		return LastName;
+	public String getLastname() {
+		return lastname;
 	}
-	public void setLastName(String lastName) {
-		LastName = lastName;
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
-	public String getFirstName() {
-		return FirstName;
+	public String getFirstname() {
+		return firstname;
 	}
-	public void setFirstName(String firstName) {
-		FirstName = firstName;
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
 	}
 	public LocalDate getBirthdate() {
 		return birthdate;
@@ -56,16 +51,16 @@ public class Student {
 	public void setBirthdate(LocalDate birthdate) {
 		this.birthdate = birthdate;
 	}
-	public Boolean getWantsNewsletter() {
-		return wantsNewsletter;
+	public Boolean getWantsnewsletter() {
+		return wantsnewsletter;
 	}
-	public void setWantsNewsletter(Boolean wantsNewsletter) {
-		this.wantsNewsletter = wantsNewsletter;
+	public void setWantsnewsletter(Boolean wantsnewsletter) {
+		this.wantsnewsletter = wantsnewsletter;
 	}
-	
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", LastName=" + LastName + ", FirstName=" + FirstName + ", birthdate=" + birthdate
-				+ ", wantsNewsletter=" + wantsNewsletter + "]";
+		return "Student [id=" + id + ", lastname=" + lastname + ", firstname=" + firstname + ", birthdate=" + birthdate
+				+ ", wantsnewsletter=" + wantsnewsletter + "]";
 	}
+	
 }
