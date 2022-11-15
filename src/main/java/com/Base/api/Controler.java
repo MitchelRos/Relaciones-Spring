@@ -1,6 +1,9 @@
 package com.Base.api;
 
+import java.io.IOException;
 import java.util.List;
+
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +27,11 @@ public class Controler {
 	@Autowired // = new StudentRepository()
 	StudentRepository StudentRep;
 	
+	@GetMapping("/")
+	public void getHome(HttpServletResponse MAMARE) throws IOException {
+		
+		MAMARE.sendRedirect("http://localhost:8080/swagger-ui/index.html");
+	}
 	@GetMapping("courses")
 	public List<Course> getCourse() {
 		List<Course> cursList = cursRep.findAll();
